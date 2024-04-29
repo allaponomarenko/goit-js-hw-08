@@ -85,24 +85,15 @@ gallery.innerHTML = galleryHTML;
 
 
 gallery.addEventListener('click', event => {
-    event.preventDefault();
-    if (event.target.nodeName === 'IMG') {
-      console.log(event.target.dataset.source); // Виводимо в консоль посилання на велике зображення
-    }
-  });
+  event.preventDefault();
+  if (event.target.nodeName === 'IMG') {
+    console.log(event.target.dataset.source);  // Для тестування, можна закоментувати пізніше
+    const instance = basicLightbox.create(`
+      <img src="${event.target.dataset.source}" width="800" height="600">
+    `);
+    instance.show();
+  }
+});
 
-  
-
-
-
-  gallery.addEventListener('click', event => {
-    event.preventDefault();
-    if (event.target.nodeName === 'IMG') {
-      const instance = basicLightbox.create(`
-        <img src="${event.target.dataset.source}" width="800" height="600">
-      `);
-      instance.show();
-    }
-  });
   
     
