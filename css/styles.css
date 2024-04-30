@@ -1,32 +1,36 @@
 * {
-    list-style-type: none;
-  }
-  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .gallery {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 1440px;
-  height: 696px;
-  padding: 24px 156px;
-  
+  width: 1128px;
+  margin: 40px auto;
   gap: 24px;
   background: #FFF;
 }
 
-
 .gallery-item {
-    display: flex;
+  width: 360px;
+  height: 200px;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+  overflow: hidden;
 }
 
-
-.gallery-link {
-    display: flex;
+.gallery-item:hover {
+  transform: scale(1.0444, 1.04);
 }
-
 
 .gallery-image {
-    display: flex;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
 }
